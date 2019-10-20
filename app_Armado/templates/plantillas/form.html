@@ -1,0 +1,70 @@
+{% extends 'plantillas/Armafox.html' %}
+
+
+    
+{% block content %}
+<section id="mainform">
+    <article class="articuloform">
+        <h2>Para Solicitar Nuestros Servicios Complete Registro</h2>
+    </article>   
+
+    
+    <form class="form" onsubmit="return validacionesFormulario();">
+
+        <label for="nombre">Ingrese su nombre completo:</label>
+        <input type="text" placeholder="escriba su nombre" name ="nombre" id="nombre">
+
+        <label for="rut">Ingrese su rut:</label>
+        <input type="text" placeholder="escriba su rut" name ="rut" id="rut">
+
+        <label for="usuario">Ingrese su Nombre de Usuario:</label>
+        <input type="text" placeholder="escriba su nombre de usuario" name ="nombre" id="usuario">
+
+        <label for="password1">Ingrese su Contraseña:</label>
+        <input type="password" placeholder="escriba su contraseña" name ="contraseña1" id="contraseña1">
+
+        <label for="password2">Confirme su Contraseña:</label>
+        <input type="password" placeholder="confirme su contraseña" name ="contraseña2" id="contraseña2">
+
+        <label for ="correo">Ingrese su correo:</label>
+        <input type="email" placeholder="@gmail.com/@hotmail.es" name ="correo" id="correo">
+    
+        <label for = "number" >Ingrese su número de celular </label>
+        <input type= "number" placeholder="escriba su numero celular" name = "number" id= "number">
+    
+        <br/>
+        <br/>
+        <input type="submit">
+        <br/>
+        <br/>
+        
+    </form>
+
+</section>
+
+<section id="informacion">
+    <div class="numero">
+        <p><strong>+ 569 97681778</strong></p>
+    </div>
+
+    <div class="parmado">
+        <article>
+        <p><strong>Más información en nuestras redes sociales</strong></p> 
+        </article>
+    </div>
+
+    </div>
+
+        <section class="redes">
+            <div class="Facebook"><a target="_blank" href="
+                https://www.facebook.com/ArmaFox-ARMAMOSTUPCENCASA-112910423409893/?modal=admin_todo_tour">Fac</a></div>
+            <div class="Google"><a target="_blank" href="https://twitter.com/ArmafoxA">Goo</a></div>
+            <div class="Instagran"><a target="_blank" href="https://www.instagram.com/armafox_armapc_cl/?hl=es-la">Ins</a></div>
+            <div class="Email"><a target="_blank" href="armafoxadomicilio@gmail.com">Ema</a></div>
+        </section>
+
+    </div>
+
+</section>
+{% endblock %}
+  

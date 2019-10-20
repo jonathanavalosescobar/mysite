@@ -1,0 +1,769 @@
+
+*{
+    margin: 0%;
+    padding: 0%; 
+   
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+a{
+   text-decoration: none;
+   color: #fff;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+
+
+/*HEADER*/
+
+header{
+   /*para darle tamaño y centrarlo con margin auto*/
+    max-width: 960px;
+    margin: auto;
+    background:  #EFECDD;/*mismo color para el contenido del header*/ 
+    overflow: hidden;/*para poder ocupar el float y mober los contenedores*/
+    margin-bottom:10px;
+    margin-top: 10px;
+    box-shadow: 3px 3px 5px  #000;
+    -moz-box-shadow: 3px 3px 5px 5px  #000;
+    -webkit-box-shadow: 3px 3px 5px  #000;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:700px){
+    header{
+        width:100%;
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+        margin-bottom:10px;
+    }
+}
+
+/*para alinear el menu*/
+#subheader {
+    width:100%;
+    margin: auto;
+    box-sizing: border-box;/*El milagroso*/ 
+}
+
+/*LOGO ESTRUCTURA*/
+#divlogo{
+    float: left;/*para que se flote a la izquierda el logo*/
+    width: 25%;/*espacio que ocupa en el contenedor subheader*/
+    height: 100px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;/*El milagroso*/ 
+}
+
+
+@media screen and (max-width:697px){
+    #divlogo {
+       width:100%;/*para que el logo ocupe todo el contendor*/ 
+       height: 80px;
+       background:#EFECDD;
+      
+    }
+}
+
+#divlogo .logoarmafox{
+    width: 100%;
+    height:100%;
+    border-radius:10px; 
+   
+}
+
+@media screen and (max-width:697px){
+    #divlogo .logoarmafox{
+       width:50%;/*para que el logo ocupe todo el contendor*/ 
+       height: 100%;
+       background: #EFECDD;
+       padding: 0px 0px 0px 100px ;
+       border-radius: 5px;
+      
+    }
+}
+
+
+/*MENU ESTRUCTURA*/
+
+header #subheader nav {
+    float: right;/*para que se flote a la derecha del logo*/
+    width: 60%;/*espacio que ocupa en el contenedor subheader*/
+    padding: 40px 0px;
+    text-align: left;        
+}
+
+@media screen and (max-width:700px){
+    header #subheader nav  {
+        width: 100%;
+        color: #fff;
+        background:  #EFECDD;
+        text-align: center;/*para alinear el texto del nav al centro*/ 
+        height: auto;/*para poder darle el margen al elemento a */   
+    }
+}
+
+header #subheader nav ul li{
+    display: inline;/*para eliminar las puntos de las lista tipo desordenada*/
+}
+
+header #subheader nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    background:  rgb(93, 92, 88);
+    border-radius: 5px;
+}
+
+@media screen and (max-width:700px){
+    header #subheader nav ul li a {
+       color: #fff;
+       font-size: 16px;
+       float: left;
+       width: 100%;
+       margin: 15px 0px;
+    }
+}
+
+header #subheader nav ul li a:hover{
+  color: #fff;
+  background: black;
+  text-decoration: none;/*para quitarle las lineas*/
+  border-radius:5px; 
+}   
+
+@media screen and (max-width:700px){
+    header #subheader nav ul li a:hover {
+        color:#EFECDD;
+        background: black;
+    }
+}
+
+/*WRAP*/
+
+#wrap{
+    max-width: 960px;
+    margin: auto;/*para centrar contenido*/
+    clear: both;
+    overflow: hidden; 
+    border-radius: 5px; 
+    background: #EFECDD;
+}
+
+@media screen and (max-width:700px){
+    #wrap{
+        width: 100%;/*para que ocupe el 100% del ancho pantalla celular*/
+        max-width: 1000px;
+        clear: both;
+        overflow: hidden;  
+    }
+}
+
+
+
+/*CONTENIDO*/
+
+#contenido{
+    width:100%;
+    max-width: 1000px;
+    height: 900px;
+    overflow: hidden;
+    padding: 60px;
+    background: #EFECDD;
+    border-radius: 5px;
+    box-sizing: border-box;/*El milagroso*/
+    text-align: center;/*centrar el texto del contenido*/
+}
+
+.parrafos{
+    font-size: 20px;
+}
+
+@media screen and (max-width:700px){
+    .parrafos{
+        font-size: 15px;
+    }
+}
+
+
+#artinovacion{
+    width: 100%;
+    height: 100%;
+}
+
+#divinovacion{
+    width: 100%;
+    height: 400px;
+}
+
+@media screen and (max-width:700px){
+    #divinovacion{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+
+#imginovacion{
+    width: 100%;
+    height: 100%;
+}
+
+
+.subtitulos{
+   opacity:0.4; 
+}
+
+#contenido article >button{
+    width: 100px;
+    height: 40px;
+    background:  #fff;
+    border-color: #000;
+    font-size: 16px;
+}
+
+
+/*GALERIA*/
+
+
+#galeriamain{
+    width: 100%;
+    margin-top: 70px;/*Separar top contenido con margen */
+    margin-bottom: 70px;/*Separar bot contenido con margen */ 
+}
+
+#titulogaleria{
+    width: 100%;
+    font-size: 20px;
+    background: #EFECDD; 
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom:15px;
+    box-sizing: border-box;/*El milagroso*/  
+}
+
+@media screen and (max-width:700px){
+    #titulogaleria {
+        width: 100%;
+        font-size: 14px; 
+        text-align: center;
+    }
+}
+
+#galeria{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;/*la clave*/
+    background: #EFECDD;  
+    border-radius: 5px; 
+}
+
+.contgaleria{
+    width: 300px;
+    padding: 20px;
+    text-align: center;   
+    margin: auto;    
+}
+
+@media screen and (max-width:700px){
+    .contgaleria {
+        width: 50%;
+        float: left;
+    }
+}
+
+.imgpc{
+    width: 100%;
+    height: 300px;
+}
+
+#galeria .contgaleria label{
+ font-size: 26px;
+}
+
+#galeria .contgaleria .butimg{
+    width: 150px;
+    height: 20px;
+    margin: auto;
+    padding: 10px;  
+    color: #fff;
+    background: rgb(93, 92, 88);
+    border-radius: 5px;
+}
+
+#galeria .contgaleria .butimg a {
+    text-decoration: none;
+}
+
+#galeria .contgaleria .butimg:hover{
+    color: #fff;
+    background: black;
+    color: #fff;  
+}
+
+
+/* FORMULARIO*/
+
+
+#mainform{
+    width: 100%;
+    overflow: hidden;
+    background: #EFECDD;  
+    border-radius:5px;
+    box-sizing: border-box;/*El milagroso*/ 
+}
+
+.articuloform{
+    width:100%;
+    font-size: 20px;
+    background: #EFECDD;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;/*El milagroso*/ 
+}
+
+@media screen and (max-width:700px){
+    #mainform .articuloform h2 {
+        font-size: 16px;
+
+    }
+}
+
+.form{
+    
+    width: 50%; 
+    background: #fff;
+    padding:40px 40px; 
+    margin: auto;
+    box-sizing: border-box;/*El milagroso*/ 
+}
+
+@media screen and (max-width:700px){
+    #mainform {
+        background: #EFECDD;
+    }
+}
+
+
+
+
+@media screen and (max-width:700px){
+   .form {
+        width: 90%;    
+    }
+}
+
+label{
+   font-size:18px;
+   display:block;
+   width: 100%; 
+}
+   
+textarea{
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+   
+input, textarea{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+}
+   
+input:focus ,textarea:focus{
+    border:1px solid #1668c4;
+}
+   
+input[type="sumit"]{
+    margin-bottom: 0;
+    background:  #1668c4;
+    color:#fff;
+    border: none;
+}
+   
+input[type="sumit"]:hover{
+    background:#4a88f4;
+    cursor: pointer;
+}
+
+select{
+    width: 100%;
+    height: 30px;
+}
+
+/*INFORMACION*/
+
+#informacion {
+    width: 100%;
+    height: 200px;
+    background:  #EFECDD;
+    color: black; 
+    padding: 60px 0px 0px 0px; 
+    border-radius: 5px; 
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-sizing: border-box;/*El milagroso*/     
+}
+
+#informacion .numero{
+   width: 20%;
+   font-size: 20px;
+   text-align: center;
+   color: black;
+   float:left;  
+}
+
+@media screen and (max-width:700px){
+    #informacion .numero {
+        width: 100%;
+        font-size: 14px;
+        color: #000;
+        text-align: center;  
+    }
+}
+
+.parmado{
+   width: 50%;
+   font-size: 20px;
+   color: black;
+   float: left;
+   text-align: center;
+}
+
+@media screen and (max-width:700px){
+    #informacion .parmado{
+        width: 100%;
+        font-size: 14px;
+        text-align: center; 
+        color: #000;
+        margin: 20px;/*para crear una separacion entre numero y redes*/ 
+    }
+}
+
+#informacion .redes >div {
+    width: 5%;
+    height:50px; 
+    float: left;
+    font-size: 20px;
+    opacity: 0.5; 
+    margin-right: 15px; 
+  
+}
+
+
+@media screen and (max-width:700px){
+    #informacion .redes >div {
+        width: 50px;
+        height:50px; 
+        font-size: 20px;
+        opacity: 0.4; 
+        margin-left:15px; 
+    }
+}
+
+
+
+
+#informacion .redes >div:hover {
+    opacity:1;
+}
+/*para dejar transparente el texto de las redes*/
+#informacion .redes .Facebook{
+   background: url(../img/facebook.png);
+   -webkit-text-fill-color: transparent;
+}
+
+#informacion .redes .Google{
+   background: url(../img/googleplus.png);
+   -webkit-text-fill-color: transparent;
+}
+
+#informacion .redes .Instagran{
+    background: url(../img/instagram.png);
+    -webkit-text-fill-color: transparent; 
+}
+
+#informacion .redes .Email{
+    background: url(../img/gmail.png);
+    -webkit-text-fill-color: transparent; 
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    max-width: 960px;
+    margin: auto;
+    height: 80px;
+}
+
+@media screen and (max-width:700px){
+    footer {
+        width: 100%;    
+    }
+}
+
+#divfooter{
+    width: 100%;
+    height: 100%;
+    background:WHITE;
+}
+
+#imgfooter{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+
+
+#imgfooter2{
+
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+/*WIKI*/
+
+#wiki{
+
+    width: 100%;
+    height: 2100px;
+    background: #EFECDD;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px; 
+    font-family: 'handlee';
+    font-size:13pt;
+}
+
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    #wiki {
+        background: #EFECDD;
+        height:3600px ;
+    }
+}
+
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    #wiki {
+        background: #EFECDD;
+        height:auto;
+    }
+}
+
+
+.informacionwiki{
+    width: 50%;
+    height: auto;
+    float: left;
+    background:  #EFECDD;
+    color: black;
+    text-align:justify;
+    font-family: 'handlee';
+    font-size: 16px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right:10px;
+    padding-bottom: 40px;
+    
+}
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    .informacionwiki {
+        width: 90%;
+        height: auto;/*importantisímo el largo se adapta al parrafo*/
+        background:  #EFECDD;
+        color: black;
+        text-align:justify;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    .informacionwiki {
+        width: 90%;
+        height: auto;/*importantisímo el largo se adapta al parrafo*/
+        background:  #EFECDD;
+        color: black;
+        text-align:justify;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
+#divimgprocesador{
+    width: 47%;
+    height: 536px;
+    float: right;
+
+}
+
+#divimgtarjeta{
+    width: 47%;
+    height: 347px;
+    float: right;
+
+}
+
+
+#divimgmemoria{
+    width: 47%;
+    height: 500px;
+    float: right;
+
+}
+
+#divimgplaca{
+    width: 47%;
+    height: 380px;
+    float: right;
+
+}
+
+#divimgfuente{
+    width: 47%;
+    height: 300px;
+    float: right;
+
+}
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    #divimgprocesador {
+        width: 100%;   
+        height: 300px;
+        background: #EFECDD;
+    }
+}
+
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    #divimgtarjeta {
+        width: 100%;   
+        height: 300px;
+        background: #EFECDD;
+    }
+}
+
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    #divimgmemoria {
+        width: 100%;   
+        height: 300px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    #divimgplaca {
+        width: 100%;   
+        height: 300px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    #divimgfuente {
+        width: 100%;   
+        height: 300px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    #divimgprocesador {
+        width: 90%;   
+        height: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    #divimgtarjeta {
+        width: 90%;   
+        height: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    #divimgmemoria {
+        width: 90%;   
+        height: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    #divimgplaca {
+        width: 90%;   
+        height: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    #divimgfuente {
+        width: 90%;   
+        height: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: #EFECDD;
+    }
+}
+
+
+
+
+
+.imgwiki{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:1024px){ /*FOR ¡Pad and ¡Pad Pro*/
+    .imgwiki {
+        width: 60%;   
+        height: 100%;
+        padding-left: 150px;
+        background: #EFECDD;
+    }
+}
+
+@media screen and (max-width:431px){ /*FOR Android and ¡Phone*/
+    .imgwiki {
+        width: 100%;   
+        height: 100%;
+        padding-left: 0px;
+        background: #EFECDD;
+    }
+}

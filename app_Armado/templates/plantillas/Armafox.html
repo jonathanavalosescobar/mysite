@@ -1,0 +1,223 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Armafox</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    
+    <script src="/static/js/jquery-3.1.0.min.js"></script>
+	<script src="/static/js/jquery.flexslider.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/validacion.js"></script>
+    
+   
+    <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/armafox.css' %}"> 
+
+    
+   
+
+</head>
+
+<body>
+   
+      
+    <header>
+       <div id="subheader" class="row">
+           <div id="divlogo">
+              <img class="logoarmafox" src="/static/img/LOGO FINAL VERSION CON FONDO.png " alt="logo de armafox">
+
+            </div>
+            <nav class ="col-xs-12 col-md-6">
+                <ul>
+                  <li> <a href="http://localhost:8000">Inicio</a> </li>
+                  <li> <a href="http://localhost:8000/form">Registro</a> </li>
+                  <li> <a href="http://localhost:8000/informacion">Wiki Armafox</a> </li>
+                  <li> <a href="#">Solicitar</a> </li>
+                </ul> 
+              
+            </nav>
+        </div>
+    </header>
+    
+    
+    <section id="wrap">
+        {% block content %}
+        <section class="flexslider">
+            <ul class="slides">
+
+                <li>
+                    <img src="/static/img/slideshow/A.computador.jpg" alt="img1">
+                    <section class="caption">
+                        <h2> "Profesionales a tu Servicio</h2>
+                    </section>
+                </li>
+    
+                <li>
+                    <img src="/static/img/slideshow/imagen2.jpg" alt="img2">
+                    <section class="caption">
+                        <h2>"LLevamos Calidad a tu Domicilio"</h2> 
+                    </section>
+                </li>
+    
+                <li>
+                    <img src="/static/img/slideshow/imagen3.jpg" alt="img3">
+                    <section class="caption">
+                        <h2>"La Mejor Disposición según tu horario"</h2>
+                    </section>
+                </li>
+    
+            </ul>
+                          
+        </section>
+
+
+       
+
+        
+        <section id="contenido">
+
+            <article id="artinovacion">
+                <h2 class="titulos">Armafox la Innovación a tu Domicilio</h2>
+                <br>
+                <h4 class="subtitulos">Ofrecemos una Clase opcional respecto a los Componentes del computador </h4>
+                <br>
+                <br>
+                <p class="parrafos">
+                    Nuestra empresa se dedica a orientar al cliente a lo que se le acomode a sus requerimientos, ya sea para trabajos, 
+                    videojuegos entre otros; conllevando por supuesto una visita instructiva bajo la labor de nuestros excelentes 
+                    profesionales.
+                </p>
+                <br>
+                <br>
+                <p class="parrafos">
+                    En Armafox ofrecemos una capacitación opcional gratuita durante nuestros servicios de armado a domicilio, 
+                    de esta manera buscamos satisfacer y entregar un servicio de calidad a nuestros clientes. En Armafox pensamos 
+                    en todas las personas desde las que poseen amplio conocimiento en informática hasta las que desconocen un hardware
+                    y software, por ende se les guía para escoger un equipo que más se ajuste a sus necesidades.
+
+                </p>
+                <br>
+                <br>
+                <div id="divinovacion">
+                    <img id=imginovacion src="/static/img/clases.jpg" alt="imagen inovacion">
+            
+                </div>
+                    
+            </article>
+
+        </section>
+        
+        
+
+
+
+
+        <section id="galeriamain">
+            <div id="titulogaleria">
+                
+                <h2>Computadores ya Armados Para su Compra y Despacho a Domicilio Según sus Necesidades</h2>
+                
+            </div> 
+
+            <div id="galeria">
+            
+                <div class="contgaleria">
+                 <img class="imgpc" src="/static/img/parmados/gamerbajo.jpg" alt="img pc1"><br>
+                 <label>Gamer Gama Baja</label>
+                 <p class="caracteristicas">  Video = Gtx Geforce 610 1gb Gddr3<br>Procesador = Intel Core i3-5600 3.3GHz<br>Disco Duro =500GB <br>Ram = 8 ram </p>
+                 <div class="butimg"><a target="_blank" href="img/">Ver PC</a></div>
+                </div>
+   
+                <div class="contgaleria">
+                    <img class="imgpc" src="/static/img/parmados/gamermedio.jpg" alt="img pc2"><br>
+                    <label>Gamer Gama Media</label>
+                    <p class="caracteristicas"> Video = Gt Geforce 610 1gb<br>Procesador =AMD® Ryzen 3 2200G 3.5 GHz <br>Disco Duro =1 TB <br>Ram = 8 ram </p>
+                    <div class="butimg"><a target="_blank" href="img/">Ver PC</a></div>
+                </div>
+
+                <div class="contgaleria">
+                    <img class="imgpc" src="/static/img/parmados/gameralto.jpg" alt="img pc3"><br>
+                    <label>Gamer Gama Alta</label>
+                    <p class="caracteristicas"> Video = NVIDIA GeForce GTX 1060<br>Procesador = Intel core I7 <br>Disco Duro =2 TB <br>Ram = 16 ram </p>
+                    <div class="butimg"><a target="_blank" href="img/">Ver PC</a></div>  
+                </div>
+
+                <div class="contgaleria">
+                    <img class="imgpc" src="/static/img/parmados//trabajobaja.jpg" alt="img pc4"><br>
+                    <label>Pc Trabajo Gama Baja</label>
+                    <p class="caracteristicas"> Video = Intel HD Graphics<br>Procesador = AMD PHENOM X4 9750 2400MHZ <br>Disco Duro =500GB <br>Ram = 4 GB
+                    </p>
+                    <div class="butimg"><a target="_blank" href="img/">Ver PC</a></div>
+                </div>
+
+                <div class="contgaleria">
+                    <img class="imgpc" src="/static/img/parmados/trabajomedio.jpg" alt="img pc5"><br>
+                    <label>Pc Trabajo Gama Media</label>
+                    <p class="caracteristicas"> Video =  Integrada HD Intel 630<br>Procesador =  Intel Core i5-7300 2.8GHz<br>Disco Duro =1TB <br>Ram = 8GB </p>
+                    <div class="butimg"><a target="_blank" href="img/">Ver PC</a></div>
+                </div>
+
+                <div class="contgaleria">
+                    <img class="imgpc" src="/static/img/parmados/trabajoalta.jpg" alt="img pc6"><br>
+                    <label>Pc Trabajo Gama Alta</label>
+                    <p class="caracteristicas"> Video = Integrada UHD Intel 630<br>Procesador = Intel Core i7-8700 3.6 GHz<br>Disco Duro =1TB <br>Ram = 16GB </p>
+                    <div class="butimg"><a target="_blank" href="img/">Ver PC</a></div> 
+                </div>
+                
+            </div>
+
+        </section>
+        
+        <section id="informacion">
+            <div class="numero">
+                <p><strong>+ 569 97681778</strong></p>
+            </div>
+        
+            <div class="parmado">
+               <article>
+               <p><strong>Más información en nuestras redes sociales</strong></p> 
+               </article>
+            </div>
+
+            </div>
+        
+                <section class="redes">
+                    <div class="Facebook"><a target="_blank" href="
+                        https://www.facebook.com/ArmaFox-ARMAMOSTUPCENCASA-112910423409893/?modal=admin_todo_tour">Fac</a></div>
+                    <div class="Google"><a target="_blank" href="https://twitter.com/ArmafoxA">Goo</a></div>
+                    <div class="Instagran"><a target="_blank" href="https://www.instagram.com/armafox_armapc_cl/?hl=es-la">Ins</a></div>
+                    <div class="Email"><a target="_blank" href="armafoxadomicilio@gmail.com">Ema</a></div>
+                </section>
+
+            </div>
+
+        </section>
+
+        <div> 
+            <a href="https://www.contadorvisitasgratis.com" title="contador de visitas html"><img src="https://counter7.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=klbcx3aw1828pu98mgqqqu3bam45ep71" border="0" title="contador de visitas html" alt="contador de visitas html"></a>
+        </div>
+        <h3>Contador de Paginas Armafox</h3>
+
+         
+        {% endblock %}
+    </section>
+    
+    <footer>
+       
+        <div id= divfooter>
+            <img id="imgfooter" src="/static/img/foot final version final 1.png" alt="img footer">
+            <img id="imgfooter2" src="/static/img/foter2.png" alt="img footer2">
+        </div>
+        
+    </footer>
+
+</body>
+</html>
