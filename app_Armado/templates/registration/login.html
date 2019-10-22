@@ -1,0 +1,84 @@
+{% extends "plantillas/Armafox.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<br/>
+<hr/>
+<br/>
+<p><Table>Su Usuario o Contraseña no Corresponden a un Registro Existente</Table></p>
+<br/>
+<hr/>
+<br/>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <br/>
+    <hr/>
+    <br/>
+    <p>Usted Debe Logearse Para ver esta Pagina.</p>
+    <br/>
+    <hr/>
+    <br/>
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+<div>
+  <td>{{ form.username.label_tag }}</td>
+  <td>{{ form.username }}</td>
+</div>
+<div>
+  <td>{{ form.password.label_tag }}</td>
+  <td>{{ form.password }}</td>
+</div>
+
+<div>
+  <input type="submit" value="login" required/>
+  <input type="hidden" name="next" value="{{ next }}" required/>
+</div>
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+<div id="divinovacion">
+        
+  <img id=imginovacion src="/static/img/slideshow/A.computador.jpg" alt="imagen inovacion">
+   
+<br/> 
+<br/>
+<br/>
+</div>
+<section id="informacion">
+  <div class="numero">
+      <p><strong>+ 569 97681778</strong></p>
+  </div>
+
+  <div class="parmado">
+      <article>
+      <p><strong>Más información en nuestras redes sociales</strong></p> 
+      </article>
+  </div>
+
+  </div>
+
+      <section class="redes">
+          <div class="Facebook"><a target="_blank" href="
+              https://www.facebook.com/ArmaFox-ARMAMOSTUPCENCASA-112910423409893/?modal=admin_todo_tour">Fac</a></div>
+          <div class="Google"><a target="_blank" href="https://twitter.com/ArmafoxA">Goo</a></div>
+          <div class="Instagran"><a target="_blank" href="https://www.instagram.com/armafox_armapc_cl/?hl=es-la">Ins</a></div>
+          <div class="Email"><a target="_blank" href="armafoxadomicilio@gmail.com">Ema</a></div>
+      </section>
+
+  </div>
+
+</section>
+
+{% endblock %}

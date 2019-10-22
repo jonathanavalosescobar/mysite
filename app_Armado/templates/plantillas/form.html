@@ -9,28 +9,27 @@
     </article>   
 
     
-    <form class="form" onsubmit="return validacionesFormulario();">
+    <form class="form"   method="POST" onsubmit="return validacionesFormulario();">
+        {% csrf_token %}   
+        <label for="nombre">Ingrese su nombre:</label>
+        <input type="text" placeholder="escriba sus nombres" name ="first_name" id="nombre" required>
 
-        <label for="nombre">Ingrese su nombre completo:</label>
-        <input type="text" placeholder="escriba su nombre" name ="nombre" id="nombre">
-
-        <label for="rut">Ingrese su rut:</label>
-        <input type="text" placeholder="escriba su rut" name ="rut" id="rut">
+        <label for="nombre">Ingrese su apellido:</label>
+        <input type="text" placeholder="escriba sus apellidos" name="last_name" id="nombre" required>
 
         <label for="usuario">Ingrese su Nombre de Usuario:</label>
-        <input type="text" placeholder="escriba su nombre de usuario" name ="nombre" id="usuario">
-
-        <label for="password1">Ingrese su Contraseña:</label>
-        <input type="password" placeholder="escriba su contraseña" name ="contraseña1" id="contraseña1">
-
-        <label for="password2">Confirme su Contraseña:</label>
-        <input type="password" placeholder="confirme su contraseña" name ="contraseña2" id="contraseña2">
+        <input type="text" placeholder="escriba su nombre de usuario" name="username" id="usuario" required>
 
         <label for ="correo">Ingrese su correo:</label>
-        <input type="email" placeholder="@gmail.com/@hotmail.es" name ="correo" id="correo">
-    
-        <label for = "number" >Ingrese su número de celular </label>
-        <input type= "number" placeholder="escriba su numero celular" name = "number" id= "number">
+        <input type="email" placeholder="@gmail.com/@hotmail.es" name="email" id="correo" required>
+
+        <label for="password1">Ingrese su Contraseña:</label>
+        <input type="password" placeholder="escriba su contraseña" name="password1" id="contraseña1" required>
+
+        <label for="password2">Confirme su Contraseña:</label>
+        <input type="password" placeholder="confirme su contraseña" name="password2" id="contraseña2" required>
+
+       
     
         <br/>
         <br/>
