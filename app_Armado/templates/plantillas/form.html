@@ -12,22 +12,22 @@
     <form class="form"   method="POST" onsubmit="return validacionesFormulario();">
         {% csrf_token %}   
         <label for="nombre">Ingrese su nombre:</label>
-        <input type="text" placeholder="escriba sus nombres" name ="first_name" id="nombre" required>
+        <input type="text" placeholder="escriba sus nombres" name ="first_name" id="first_name" >
 
         <label for="nombre">Ingrese su apellido:</label>
-        <input type="text" placeholder="escriba sus apellidos" name="last_name" id="nombre" required>
+        <input type="text" placeholder="escriba sus apellidos" name="last_name" id="last_name" >
 
         <label for="usuario">Ingrese su Nombre de Usuario:</label>
-        <input type="text" placeholder="escriba su nombre de usuario" name="username" id="usuario" required>
+        <input type="text" placeholder="escriba su nombre de usuario" name="username" id="username" >
 
         <label for ="correo">Ingrese su correo:</label>
-        <input type="email" placeholder="@gmail.com/@hotmail.es" name="email" id="correo" required>
+        <input type="email" placeholder="@gmail.com/@hotmail.es" name="email" id="email" >
 
         <label for="password1">Ingrese su Contraseña:</label>
-        <input type="password" placeholder="escriba su contraseña" name="password1" id="contraseña1" required>
+        <input type="password" placeholder="escriba su contraseña" name="password1" id="password1" >
 
         <label for="password2">Confirme su Contraseña:</label>
-        <input type="password" placeholder="confirme su contraseña" name="password2" id="contraseña2" required>
+        <input type="password" placeholder="confirme su contraseña" name="password2" id="password2" >
 
        
     
