@@ -19,6 +19,11 @@ def info(request):
 def form(request):
     return render(request, 'plantillas/form.html')   
 
+def post_list (request)
+user = request.user
+if user.has_perm('blog.Tecnico'):
+    posts
+
 
 
 # para registrar usuario.
