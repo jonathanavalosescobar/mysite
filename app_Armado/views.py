@@ -39,4 +39,4 @@ def login_exito(request):
 
 # funcion para retornar logout.
 def login_salida(request):
-    return render(request, 'registration/logged_out.html')
+    return render(request, 'plantillas/logged_out.html')
