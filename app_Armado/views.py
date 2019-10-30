@@ -19,11 +19,6 @@ def info(request):
 def form(request):
     return render(request, 'plantillas/form.html')   
 
-def post_list (request)
-user = request.user
-if user.has_perm('blog.Tecnico'):
-    posts
-
 
 
 # para registrar usuario.
@@ -38,10 +33,16 @@ def exito(request):
     return render(request, 'plantillas/RegistroExitoso.html')
 
 
-# funcion para retornar login_exitoso.
+# funcion para retornar login exitoso dependiendo del tipo de usuario.
 def login_exito(request):
-    return render(request, 'plantillas/solicitud.html')
+    user = request.user
+    if user.has_perm('app_Armado.tecnico'):
+        
+        return render(request, 'plantillas/tecnico.html')
+    else:
+        return render(request, 'plantillas/solicitud.html')  
+    
 
 # funcion para retornar logout.
 def login_salida(request):
-    return render(request, 'registration/logged_out.html')
+    return render(request, 'plantillas/logged_out.html')

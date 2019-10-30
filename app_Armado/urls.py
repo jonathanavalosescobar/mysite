@@ -12,11 +12,15 @@ from django.contrib.auth.decorators import login_required
 
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
-    path('', inicio, name='Armafox'),
-    path('informacion', info, name='informacion'),
+    path('', views.post_list, name='post_list '),
+    path('Armafox', inicio, name='Armafox'),
+    path('informacion', info, name='ingormacion'),
     path('RegistroExitoso', exito, name='exito'),
+    
     path('solicitud',login_required(login_exito) , name='solicitud'),
+    path('tecnico',login_required(login_exito) , name='tecnico'),
+
+
     path('logged_out',login_salida , name='logged_out'),
     url(r'form', RegistroUsuario.as_view(), name="form") 
   
