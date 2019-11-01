@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: oteddysnow@gmail.com
+Date: Fri, 01 Nov 2019 00:37:11 -0000
+Message-ID: <157256863169.572.13857631724781138763@DESKTOP-9RUGPHI>
+
+
+
+Está recibiendo este correo porque solicitó un cambio de contraseña en 127.0.0.1:8000.
+
+Por favor vaya a esta página y configure su nueva constreña
+
+http://127.0.0.1:8000/accounts/reset/MjI/5b1-33dd668e5c1c32a5d86b/
+
+
+Su nombre de usuario en caso que lo haya olvidado: PRUEBA
+
+Gracias por usar nuestro sitio!
+
+JLA Asociados.
+
+
+-------------------------------------------------------------------------------
