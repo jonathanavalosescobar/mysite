@@ -3,31 +3,31 @@
 {% block content %}
 
 {% if form.errors %}
-<br/>
 <hr/>
-<br/>
-<p><Table>Su Usuario o Contraseña no Corresponden a un Registro Existente</Table></p>
-<br/>
+  <article class="articuloform">
+    <h4 style="color:#D35400;">"Su Usuario o Contraseña no Corresponden a un Registro Existente"</h2>
+  </article> 
 <hr/>
-<br/>
 {% endif %}
 
 {% if next %}
-    {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-    {% else %}
-    <br/>
-    <hr/>
-    <br/>
-    <p>Usted Debe Logearse Para ver esta Pagina.</p>
-    <br/>
-    <hr/>
-    <br/>
-    {% endif %}
+  {% if user.is_authenticated %}
+  <p>Your account doesn't have access to this page. To proceed,
+  please login with an account that has access.</p>
+  {% else %}
+  <hr/>
+  <article class="articuloform">
+    <h4 style="color:#D35400;">"Usted debe logearse para ver esta pagina" </h2>
+  </article> 
+  <hr/>
+  {% endif %}
 {% endif %}
 
-<form method="post" action="{% url 'login' %}">
+<article class="articuloform">
+  <h2>Inicie Sesión como Usuario de Armafox</h2>
+</article> 
+<form class="form" method="post" action="{% url 'login' %}">
+
 {% csrf_token %}
 
 <div>
@@ -43,10 +43,15 @@
   <input type="submit" value="login" required/>
   <input type="hidden" name="next" value="{{ next }}" required/>
 </div>
-</form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+<p><a href="{% url 'password_reset' %}" style="color:#D35400;">Recuperar su Contraseña?¿</a></p>
+
+</form>
+
+<br/>
+<br/>
+<br/>
 
 <div id="divinovacion">
         
