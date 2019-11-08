@@ -3,9 +3,9 @@ MIME-Version: 1.0
 Content-Transfer-Encoding: 8bit
 Subject: Password reset on 127.0.0.1:8000
 From: webmaster@localhost
-To: f.lucero.m@gmail.com
-Date: Mon, 04 Nov 2019 14:07:16 -0000
-Message-ID: <157287643660.4016.5849645994587338508@Lucero>
+To: lmnralbo@gmail.com
+Date: Fri, 08 Nov 2019 15:59:24 -0000
+Message-ID: <157322876469.3284.14259318588836574332@Lucero>
 
 
 
@@ -13,10 +13,10 @@ Está recibiendo este correo porque solicitó un cambio de contraseña en 127.0.
 
 Por favor vaya a esta página y configure su nueva constreña
 
-http://127.0.0.1:8000/accounts/reset/MQ/5b5-85e0fb3f67d0bb1704a6/
+http://127.0.0.1:8000/accounts/reset/MjE/5b9-f0526b8dd75118d8af95/
 
 
-Su nombre de usuario en caso que lo haya olvidado: lucero
+Su nombre de usuario en caso que lo haya olvidado: tecnico
 
 Gracias por usar nuestro sitio!
 
