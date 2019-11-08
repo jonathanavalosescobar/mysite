@@ -1,0 +1,71 @@
+[33mcommit df27f62000f4632fe0a244796d8dacde0a4c7dbd[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/lucero[m[33m, [m[1;32mlucero[m[33m)[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Fri Nov 8 12:52:36 2019 -0300
+
+    se ordenan plantillas por buenas practicas
+
+[33mcommit 21e239bad7d189da36885e1da762b959530e8924[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Mon Nov 4 11:57:31 2019 -0300
+
+    se mejoro estilo visual en plantillas de registration
+
+[33mcommit 1a04ef1b414c6dbba64b5f791c3fe3d57ca2a3a3[m
+Author: lui-nunezr <55202921+lui-nunezr@users.noreply.github.com>
+Date:   Thu Oct 31 21:38:42 2019 -0300
+
+    se mejoro interfaz para registro exitoso y cambio de contraseña
+
+[33mcommit 10ca0cbad970b30686693d6f240d22611624be1d[m
+Author: lui-nunezr <55202921+lui-nunezr@users.noreply.github.com>
+Date:   Wed Oct 30 21:37:23 2019 -0300
+
+    se incorporo mejoras visuales para login logut plantilla tecnico y cliente
+
+[33mcommit 05aea60d38ccef7498ac2f1b79af1acff859610d[m
+Author: lui-nunezr <55202921+lui-nunezr@users.noreply.github.com>
+Date:   Wed Oct 30 11:36:00 2019 -0300
+
+    se incorporo tipo de logeo segun usuario y tambien recuperacion de contraseña
+
+[33mcommit 76eeff48b8c13ab615e6460abdcd3c6cda6cae9b[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Mon Oct 28 12:10:22 2019 -0300
+
+    se arreglaron pequeños errores de urls
+
+[33mcommit 16afb64e00c6e4d3f39a6c0ece5effba2da76d77[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Mon Oct 28 12:02:49 2019 -0300
+
+    areglando errores
+
+[33mcommit 85c9d8d939ec86bb614b4c33bf2be2d0ddf0e7b7[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Mon Oct 28 06:55:30 2019 -0300
+
+    se arreglo logout
+
+[33mcommit 1066acdef3027564158a3a640bf6ca8a39778cf3[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Sun Oct 27 22:03:39 2019 -0300
+
+    Se arreglo validaciones js para registro de usuarios
+
+[33mcommit 8163c4299b0f73b32bae95470618391230cfd74b[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Sun Oct 27 04:36:13 2019 -0300
+
+    Se arreglaron validaciones para plantilla solicitud vista solo por el cliente registrado
+
+[33mcommit 180f795617bf5b13663fca2042aeacfe8a159e4f[m[33m ([m[1;31morigin/luisnuñezeditoficial[m[33m, [m[1;32mluisnuñezeditoficial[m[33m)[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Tue Oct 22 19:45:30 2019 -0300
+
+    Se incorporo registro de usuario + Login seguro falta incorp recuperar contra y social login
+
+[33mcommit 52002b7362248a15397a81c69ad258027e02d7d3[m
+Author: FelipeLucero <45726971+FelipeLucero@users.noreply.github.com>
+Date:   Sun Oct 20 19:33:40 2019 -0300
+
+    Con FrontEnd Funcionando Con Django
