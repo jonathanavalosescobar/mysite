@@ -10,7 +10,7 @@ class Solicitud(models.Model):
     fecha_de_visita = models.CharField(max_length=10)
     hora_de_visita = models.CharField(max_length=5)
     direccion= models.CharField(max_length=100)   
-    preosupuesto = models.CharField(max_length=7)
+    preosupuesto = models.CharField(max_length=9)
     descripcion_pc_a_solicitar= models.CharField(max_length=50)       
     desea_induccion= models.CharField(max_length=2)  
     numero_celular = models.CharField(max_length=8)

@@ -105,14 +105,14 @@
             <tr>
                 <td>Codigo de Producto:</td>
                 <td>
-                    <input min="1" max="4" class="form-control" type="text" placeholder="Escriba el codigo a comprar" name="codigo_producto" id="codigo_producto" required>
+                    <input minlength="1" maxlength="4" class="form-control" type="text" placeholder="Escriba el codigo a comprar" name="codigo_producto" id="codigo_producto" required>
                 </td>
             </tr>
 
             <tr>
                 <td>Rut cliente:</td>
                 <td>
-                    <input min="1" max="12" class="form-control" type="text" placeholder="Escriba su rut" name="rut_cliente" id="rut_cliente" required>
+                    <input minlength="12" maxlength="12" class="form-control" type="text" placeholder="Rut cliente xx.xxx.xxx-x" name="rut_cliente" id="rut_cliente" required>
                 </td>
             </tr>
 
@@ -120,43 +120,44 @@
                 <td>Nombre Cliente:</td>
                 <td>
                     
-                    <input min="1" max="50" class="form-control" type="text" placeholder="Nombre Cliente" name="nombre_cliente" id="nombre_cliente" required>
+                    <input minlength="1" maxlength="50" class="form-control" type="text" placeholder="Nombre Cliente" name="nombre_cliente" id="nombre_cliente" required>
                 </td>
             </tr>
 
             <tr>
                 <td>Rut Visitante:</td>
                 <td>
-                    <input min="1" max="12" class="form-control" type="text" placeholder="Rut de Tecnico" name="rut_visitante" id="rut_visitante" required>
+                    <input minlength="12" maxlength="12" class="form-control" type="text" placeholder="Rut Tecnico xx.xxx.xxx-x" name="rut_visitante" id="rut_visitante" required>
                     
                 </td>
-                </tr>
+            </tr>
+
             <tr>
 
                 <td>Nombre de Visitante:</td>
                 <td>
-                    <input min="1" max="100" class="form-control" type="text" placeholder="Nombre Visitante" name="nombre_visitante" id="nombre_visitante" required>
+                    <input minlength="1" maxlength="50" class="form-control" type="text" placeholder="Nombre Visitante" name="nombre_visitante" id="nombre_visitante" required>
                 </td>
             </tr>
 
             <tr>
                 <td>Estado de Pedido:</td>
                 <td>
-                    <input min="1" max="2" class="form-control" type="text" placeholder="Estado del Pedido" name="estado_pedido" id="estado_pedido" required>
+                    <input minlength="2" maxlength="2" class="form-control" type="text" placeholder="pe = pendiente / co = completado" name="estado_pedido" id="estado_pedido" required>
                 </td>
             </tr>
 
             <tr>
                 <td>Celular:</td>
                 <td>
-                    <input min="1" max="8" class="form-control" type="text" placeholder="Ingrese Numero Celular" name="numero_celular " id="numero_celular " required>
+                    <input minlength="8" maxlength="8" class="form-control" type="text" placeholder="ejemplo 77269585" name="numero_celular " id="numero_celular " required>
                 </td>
             </tr>
 
             <tr>
                 <td>Fecha para Despacho:</td>
                 <td>
-                    <input min="1" max="10" class="form-control" type="text" placeholder="Fecha de Despacho" name="fecha_de_despacho" id="fecha_de_despacho" required=>
+                    <input minlength="10" maxlength="10" class="form-control" type="text" placeholder="ejemplo 30/12/2019" name="fecha_de_despacho" id="fecha_de_despacho" required>
                 </td>
             </tr>
     
