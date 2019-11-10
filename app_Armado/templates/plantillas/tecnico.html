@@ -1,51 +1,166 @@
 {% extends 'plantillas/Armafox.html' %}
 
 {% block content %}
+{% load static %}
 
-<nav class ="logout">
-    <ul>
-    <li> <a href="http://127.0.0.1:8000/accounts/logout/" style="color:#D35400;">Logout</a> </li>
-    </ul> 
-</nav>
+{% block css %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+{% endblock%}
 
-<article>
-    <br/>
-    <br/>   
-    <H1 align="center"> INCORPORAR LO QUE LE COMPETE AL TECNICO</H1>
-    <br/>
-    <br/> 
-    <div id="divinovacion">
-        
-        <img id=imginovacion src= "/static/img/tecnico_cliente.jpeg" alt="imagen inovacion">
+<a class="btn btn-secondary"  href="http://127.0.0.1:8000/accounts/logout/" >Logout</a> </li>
+
+<a class="btn btn-secondary" role="button"   href="{% url 'lista_solicitudestecnico' %}">Listar solicitudes</a>
+
+<a  class="btn btn-secondary" role="button"    href="{% url 'listar_producto' %}">Listar Productos</a>
+
+<h1 >Listado de solicitudes</h1>
+<div class="table-responsive">
+    <table class="table table-bordered table">
+        <tr class="thead-dark">
+   
          
-    <br/> 
-    <br/>
-    <br/>
-    </div>
-</article>
+            <th>Id solicitud</th>
+            <th>Rut cliente</th>
+            <th>Nombre completo</th>
+            <th>Fecha de visita</th>
+            <th>Hora de visita</th>
+            <th>Direccion</th>
+            <th>Presupuesto</th>
+            <th>Descripcion pc</th>
+            <th>Desea induccion</th>
+            <th>Numero celular</th>
+          
+ 
+        </tr>
+        {% for s in solicitud %}
+        <tr>
+            <td>{{s.id_servicio}}</td>
+            <td>{{s.rut_cliente}}</td>
+            <td>{{s.Nombre_completo}}</td>
+            <td>{{s.fecha_de_visita}}</td>
+            <td>{{s.hora_de_visita}}</td>
+            <td>{{s.direccion}}</td>
+            <td>{{s.presupuesto}}</td>
+            <td>{{s.descripcion_pc_a_solicitar}}</td>
+            <td>{{s.desea_induccion}}</td>
+            <td>{{s.numero_celular}}</td>
+            
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+   
+<br>
 
-<section id="informacion">
-        <div class="numero">
-            <p><strong>+ 569 97681778</strong></p>
-        </div>
+<br>
+<h1 >Listado de productos</h1>
+    <div class="table-responsive">
+    <table class="table table-bordered table">
+        <thead class="thead-dark"  >
+            <tr>
+            <th>Id producto</th>
+            <th>Procesador</th>
+            <th>Placa</th>
+            <th>Memoria_ram</th>
+            <th>Tarjeta video</th>
+            <th>Disco duro</th>
+            <th>Modelo de Gabinete</th>
+            <th>Precio</th>
+            
+            
+        </tr>
+        </thead>
+        {%for p in productos%}
+        <tr>
+            <td>{{p.id_producto}}</td>
+            <td>{{p.procesador}}</td>
+            <td>{{p.placa}}</td>
+            <td>{{p.memoria_ram}}</td>
+            <td>{{p.tarjeta_video}}</td>
+            <td>{{p.disco_duro}}</td>
+            <td>{{p.modelo_gabinete}}</td>
+            <td>{{p.precio }}</td>
+           
+        </tr>
+        {%endfor%}
+    </table>
+    </div>
+
+    <hr>
+    <br/>
+    <h1 >Pedido</h1>
+    <br/>
+    <hr>
+
+    <form class="form"  method="post"> 
+        <table class="table table-striped table-bordered">
+            {% csrf_token %}
+            <td>Numero de solicitud a abordar:</td>
+            <td>
+                <input min="1" max="999999999"class="form-control" type="number" placeholder="Numero de solicitud a abordar" name="id_pedido" id="id_pedido" required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Codigo de Producto:</td>
+            <td>
+                <input min="1" max="4" class="form-control" type="text" placeholder="Escriba el codigo a comprar" name="codigo_producto" id="codigo_producto" required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Rut cliente:</td>
+            <td>
+                <input min="1" max="12" class="form-control" type="text" placeholder="Escriba su rut" name="rut_cliente" id="rut_cliente" required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Nombre Cliente:</td>
+            <td>
+                
+                <input min="1" max="50" class="form-control" type="text" placeholder="Nombre Cliente" name="nombre_cliente" id="nombre_cliente" required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Rut Visitante:</td>
+            <td>
+                <input min="1" max="12" class="form-control" type="text" placeholder="Rut de Tecnico" name="rut_visitante" id="rut_visitante" required="">
+                
+            </td>
+            </tr>
+        <tr>
+            <td>Nombre de Visitante:</td>
+            <td>
+                <input min="1" max="100" class="form-control" type="text" placeholder="Nombre Visitante" name="nombre_visitante" id="nombre_visitante" required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Estado de Pedido:</td>
+            <td>
+                <input min="1" max="2" class="form-control" type="text" placeholder="Estado del Pedido" name="estado_pedido" id="estado_pedido" required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Celular:</td>
+            <td>
+                <input min="1" max="8" class="form-control" type="text" placeholder="Ingrese Numero Celular" name="numero_celular " id="numero_celular " required="">
+            </td>
+        </tr>
+        <tr>
+            <td>Fecha para Despacho:</td>
+            <td>
+                <input min="1" max="10" class="form-control" type="text" placeholder="Fecha de Despacho" name="fecha_de_despacho" id="fecha_de_despacho" required="">
+            </td>
+        </tr>
+   
+        <tr>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-success" value="Guardar">
+                    
+                    <input type="reset" class="btn btn-dark" value="Limpiar">
+                </td>
+            </tr> 
+
+        </table>                     
     
-        <div class="parmado">
-            <article>
-            <p><strong>Más información en nuestras redes sociales</strong></p> 
-            </article>
-        </div>
-    
-        </div>
-    
-            <section class="redes">
-                <div class="Facebook"><a target="_blank" href="
-                    https://www.facebook.com/ArmaFox-ARMAMOSTUPCENCASA-112910423409893/?modal=admin_todo_tour">Fac</a></div>
-                <div class="Google"><a target="_blank" href="https://twitter.com/ArmafoxA">Goo</a></div>
-                <div class="Instagran"><a target="_blank" href="https://www.instagram.com/armafox_armapc_cl/?hl=es-la">Ins</a></div>
-                <div class="Email"><a target="_blank" href="armafoxadomicilio@gmail.com">Ema</a></div>
-            </section>
-    
-        </div>
-    
-    </section>
-{% endblock %}
+    </form>   
+{%endblock%}
