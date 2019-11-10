@@ -20,10 +20,10 @@ urlpatterns = [
     path('solicitud',login_required(login_exito) , name='solicitud'),
     path('tecnico',login_required(login_exito) , name='tecnico'),
    
-    path('listar_solicitud', listar_solicitud , name='listar_solicitud'),
+    path('listar_solicitud',login_required(listar_solicitud) , name='listar_solicitud'),
 
-    path('listat',lista_solicitudestecnico,name="lista_solicitudestecnico"),
-    path('listaproductos',listarproductos,name="listar_producto"),
+    path('listat',login_required(lista_solicitudestecnico),name="lista_solicitudestecnico"),
+    path('listaproductos',login_required(listarproductos),name="listar_producto"),
 
     path('logged_out',login_salida , name='logged_out'),
     url(r'form', RegistroUsuario.as_view(), name="form") 

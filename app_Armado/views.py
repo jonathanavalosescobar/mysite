@@ -64,7 +64,7 @@ def login_exito(request):
                 nombre_visitante=nomvisi,
                 estado_pedido=estpe,
                 numero_celular=numcel,
-                fecha_de_despacho=fechdes,
+                fecha_de_despacho=fechdes
             )
             pedi.save()
         return render(request, 'plantillas/tecnico.html')   # plantilla con funciones para tecnico.
@@ -102,8 +102,6 @@ def login_exito(request):
             soli.save()
         return render(request, 'plantillas/solicitud.html')  # plantilla con funciones para cliente.
     
-
-
 
 
 
