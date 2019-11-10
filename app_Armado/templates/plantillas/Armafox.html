@@ -17,9 +17,11 @@
     <script src="/static/js/main.js"></script>
     <script src="/static/js/validacion.js"></script>
     
-   
-    <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+    {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/armafox.css' %}"> 
+    {% endblock%}
+    <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+   
 
     
    

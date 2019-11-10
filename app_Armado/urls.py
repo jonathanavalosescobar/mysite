@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views 
-from .views import info, form, inicio, RegistroUsuario, exito, login_exito, login_salida
+from .views import info, form, inicio, RegistroUsuario, exito, login_exito, login_salida, listar_solicitud , lista_solicitudestecnico, listarproductos
 
 from django.contrib import admin
 from django.conf.urls import url
@@ -19,7 +19,11 @@ urlpatterns = [
     
     path('solicitud',login_required(login_exito) , name='solicitud'),
     path('tecnico',login_required(login_exito) , name='tecnico'),
+   
+    path('listar_solicitud', listar_solicitud , name='listar_solicitud'),
 
+    path('listat',lista_solicitudestecnico,name="lista_solicitudestecnico"),
+    path('listaproductos',listarproductos,name="listar_producto"),
 
     path('logged_out',login_salida , name='logged_out'),
     url(r'form', RegistroUsuario.as_view(), name="form") 
