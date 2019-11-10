@@ -21,7 +21,8 @@
 
 <form class="form" align='center' method="POST">
     {%csrf_token%}
-    <table class="table table-striped table-bordered">
+    <table  class="table table-striped table-bordered">
+
         <tr>
             <td>ID Servicio:</td>
             <td>
@@ -110,6 +111,46 @@
         
 </form>
 <br>
+
+<br/>
+<div class="table-responsive">
+<table class="table table-striped">
+    <thead  class="thead-dark" >
+        <tr>
+            <th>id solicitud</th>
+            <th>Rut Cliente</th>
+            <th>Nombre Completo</th>
+            <th>Fecha de Visita</th>
+            <th>Hora de la Visita</th>
+            <th>Direccion</th>
+            <th>Presupuesto</th>
+            <th>Descripcion de PC a Solicitar</th>
+            <th>Desea una Induccion¿</th>
+            <th>Numero Celular</th>
+            
+        </tr>
+        </thead>
+        {%for s in solicitud%}
+        <tr>
+            <td>{{s.id_servicio}}</td>
+            <td>{{s.rut_cliente}}</td>
+            <td>{{s.Nombre_completo}}</td>
+            <td>{{s.fecha_de_visita}}</td>
+            <td>{{s.hora_de_visita}}</td>
+            <td>{{s.direccion}}</td>
+            <td>{{s.preosupuesto}}</td>
+            <td>{{s.descripcion_pc_a_solicitar}}</td>
+            <td>{{s.desea_induccion}}</td>
+            <td>{{s.numero_celular}}</td>
+            
+        </tr>
+
+        {%endfor%}
+    
+    </table>
+</div>
+
+
 
 <article>
     <br/>

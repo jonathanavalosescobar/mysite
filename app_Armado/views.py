@@ -111,7 +111,7 @@ def login_salida(request):
 
 def listar_solicitud(request):
     soli= Solicitud.objects.all()
-    return render(request, 'plantillas/listar_solicitud.html', {'solicitud': soli})
+    return render(request, 'plantillas/solicitud.html', {'solicitud': soli})
 
 def lista_solicitudestecnico(request):
     soli = Solicitud.objects.all()
