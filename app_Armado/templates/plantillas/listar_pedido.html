@@ -1,0 +1,97 @@
+{% extends 'plantillas/Armafox.html' %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+    <hr/>
+    <a class="btn btn-secondary"  href="http://127.0.0.1:8000/accounts/logout/" >Logout</a> </li>
+    <a class="btn btn-secondary" role="button"   href="{% url 'listar_soli_tecnico' %}">Listar solicitudes</a>
+    <a  class="btn btn-secondary" role="button"    href="{% url 'listar_producto' %}">Listar Productos</a>
+    <a  class="btn btn-secondary" role="button"    href="{% url 'listarpedidos' %}">Listar Pedidos</a>
+    <a  class="btn btn-secondary" role="button"    href="{% url 'solicitud' %}">Ingresar Pedido</a>
+    <hr/>
+    <br/>
+    <br>
+
+    <h2 align='center' >Listado de pedidos</h2>
+    <br/>
+    <br/>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <tr class="thead-dark">
+    
+            
+                <th>id solicitud</th>
+                <th>Codigo producto</th>
+                <th>Rut cliente</th>
+                <th>Nombre cliente</th>
+                <th>Rut visitante</th>
+                <th>Nombre visitante</th>
+                <th>Estado</th>
+                <th>Numero celular</th>
+                <th>Fecha despacho</th>
+                
+            
+    
+            </tr>
+            {% for s in pedidos %}
+            <tr>
+                <td>{{s.id_pedido}}</td>
+                <td>{{s.codigo_producto}}</td>
+                <td>{{s.rut_cliente}}</td>
+                <td>{{s.nombre_cliente}}</td>
+                <td>{{s.rut_visitante}}</td>
+                <td>{{s.nombre_visitante}}</td>
+                <td>{{s.estado_pedido}}</td>
+                <td>{{s.numero_celular}}</td>
+                <td>{{s.fecha_de_despacho}}</td>
+                
+                
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+
+    <article>
+            <br/>
+            <br/>   
+            <H1 align="center"> Armafox</H1>
+            <br/>
+            <br/> 
+            <div id="divinovacion">
+                
+                <img id=imginovacion src= "/static/img/tecnico_cliente.jpeg" alt="imagen inovacion">
+                
+            <br/> 
+            <br/>
+            <br/>
+            </div>
+        </article>
+        
+        
+        <section id="informacion">
+            <div class="numero">
+                <p><strong>+ 569 97681778</strong></p>
+            </div>
+        
+            <div class="parmado">
+                <article>
+                <p><strong>Más información en nuestras redes sociales</strong></p> 
+                </article>
+            </div>
+        
+            </div>
+        
+                <section class="redes">
+                    <div class="Facebook"><a target="_blank" href="
+                        https://www.facebook.com/ArmaFox-ARMAMOSTUPCENCASA-112910423409893/?modal=admin_todo_tour">Fac</a></div>
+                    <div class="Google"><a target="_blank" href="https://twitter.com/ArmafoxA">Goo</a></div>
+                    <div class="Instagran"><a target="_blank" href="https://www.instagram.com/armafox_armapc_cl/?hl=es-la">Ins</a></div>
+                    <div class="Email"><a target="_blank" href="armafoxadomicilio@gmail.com">Ema</a></div>
+                </section>
+        
+            </div>
+        
+        </section>
+       
+    {% endblock %}

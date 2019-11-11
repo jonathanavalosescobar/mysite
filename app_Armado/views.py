@@ -103,20 +103,26 @@ def login_exito(request):
         return render(request, 'plantillas/solicitud.html')  # plantilla con funciones para cliente.
     
 
-
-
 # funcion para retornar logout.
 def login_salida(request):
     return render(request, 'registration/logged_out.html')
 
+# funcion para retornar listado solicitud de cliente.
 def listar_solicitud(request):
     soli= Solicitud.objects.all()
-    return render(request, 'plantillas/solicitud.html', {'solicitud': soli})
+    return render(request, 'plantillas/listar_solicitud.html', {'solicitud': soli})
 
-def lista_solicitudestecnico(request):
+# funcion para retornar listado de solicitudes para tecnico.
+def listar_solicitud_tecnico(request):
     soli = Solicitud.objects.all()
-    return render(request, 'plantillas/tecnico.html', {'solicitud': soli})
+    return render(request, 'plantillas/listar_soli_tecnico.html', {'solicitud': soli})
 
+# funcion para retornar listado de productos.
 def listarproductos(request):
     prod = Producto.objects.all()
-    return render(request, 'plantillas/tecnico.html', {'productos': prod})
+    return render(request, 'plantillas/listar_producto.html', {'productos': prod})
+
+# funcion para retornar listado de pedidos 
+def listarpedidos(request):
+    ped = Pedido.objects.all()
+    return render(request, 'plantillas/listar_pedido.html', {'pedidos': ped})

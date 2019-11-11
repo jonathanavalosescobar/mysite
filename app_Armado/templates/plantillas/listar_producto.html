@@ -1,0 +1,98 @@
+{% extends 'plantillas/Armafox.html' %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+    <hr/>
+
+    <a class="btn btn-secondary"  href="http://127.0.0.1:8000/accounts/logout/" >Logout</a> </li>
+    <a class="btn btn-secondary" role="button"   href="{% url 'listar_soli_tecnico' %}">Listar solicitudes</a>
+    <a  class="btn btn-secondary" role="button"    href="{% url 'listar_producto' %}">Listar Productos</a>
+    <a  class="btn btn-secondary" role="button"    href="{% url 'listarpedidos' %}">Listar Pedidos</a>
+    <a  class="btn btn-secondary" role="button"    href="{% url 'solicitud' %}">Ingresar Pedido</a>
+
+    <hr/>
+    <br/>
+    <br>
+
+    <h2 align='center'  >Listado de productos</h2>
+    <br/>
+    <br/>
+    <div class="table-responsive">
+    <table class="table table-bordered table">
+        <thead class="thead-dark"  >
+            <tr>
+            <th>Id producto</th>
+            <th>Procesador</th>
+            <th>Placa</th>
+            <th>Memoria_ram</th>
+            <th>Tarjeta video</th>
+            <th>Disco duro</th>
+            <th>Modelo de Gabinete</th>
+            <th>Precio</th>
+            
+            
+        </tr>
+        </thead>
+        {%for p in productos%}
+        <tr>
+            <td>{{p.id_producto}}</td>
+            <td>{{p.procesador}}</td>
+            <td>{{p.placa}}</td>
+            <td>{{p.memoria_ram}}</td>
+            <td>{{p.tarjeta_video}}</td>
+            <td>{{p.disco_duro}}</td>
+            <td>{{p.modelo_gabinete}}</td>
+            <td>{{p.precio }}</td>
+           
+        </tr>
+        {%endfor%}
+    </table>
+    </div>
+
+    <article>
+        <br/>
+        <br/>   
+        <H1 align="center"> Armafox</H1>
+        <br/>
+        <br/> 
+        <div id="divinovacion">
+            
+            <img id=imginovacion src= "/static/img/tecnico_cliente.jpeg" alt="imagen inovacion">
+            
+        <br/> 
+        <br/>
+        <br/>
+        </div>
+    </article>
+    
+    
+    <section id="informacion">
+        <div class="numero">
+            <p><strong>+ 569 97681778</strong></p>
+        </div>
+    
+        <div class="parmado">
+            <article>
+            <p><strong>Más información en nuestras redes sociales</strong></p> 
+            </article>
+        </div>
+    
+        </div>
+    
+            <section class="redes">
+                <div class="Facebook"><a target="_blank" href="
+                    https://www.facebook.com/ArmaFox-ARMAMOSTUPCENCASA-112910423409893/?modal=admin_todo_tour">Fac</a></div>
+                <div class="Google"><a target="_blank" href="https://twitter.com/ArmafoxA">Goo</a></div>
+                <div class="Instagran"><a target="_blank" href="https://www.instagram.com/armafox_armapc_cl/?hl=es-la">Ins</a></div>
+                <div class="Email"><a target="_blank" href="armafoxadomicilio@gmail.com">Ema</a></div>
+            </section>
+    
+        </div>
+    
+    </section>
+
+
+
+{% endblock %}
