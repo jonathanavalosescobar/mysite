@@ -3,9 +3,9 @@
 {% block content %}
 {% load static %}
 
-{% block css %}
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-{% endblock%}
+
 
 <a class="btn btn-secondary"  href="http://127.0.0.1:8000/accounts/logout/" >Logout</a> </li>
 
@@ -13,9 +13,9 @@
 
 <a  class="btn btn-secondary" role="button"    href="{% url 'listar_producto' %}">Listar Productos</a>
 
-<h1 >Listado de solicitudes</h1>
+<h2 align='center'  >Listado de solicitudes</h2>
 <div class="table-responsive">
-    <table class="table table-bordered table">
+    <table class="table table-sm">
         <tr class="thead-dark">
    
          
@@ -53,7 +53,7 @@
 <br>
 
 <br>
-<h1 >Listado de productos</h1>
+<h2 align='center'  >Listado de productos</h2>
     <div class="table-responsive">
     <table class="table table-bordered table">
         <thead class="thead-dark"  >
@@ -88,7 +88,7 @@
 
     <hr>
     <br/>
-    <h1 >Pedido</h1>
+    <h1 align='center' >Pedido</h1>
     <br/>
     <hr>
 
@@ -98,7 +98,7 @@
             <tr>
                 <td>Numero de solicitud a abordar:</td>
                 <td>
-                    <input min="1" max="999999999"class="form-control" type="number" placeholder="Numero de solicitud a abordar" name="id_pedido" id="id_pedido" required>
+                    <input minlength="1" maxlength="2" class="form-control" type="number" placeholder="Numero de solicitud a abordar" name="id_pedido" id="id_pedido" required>
                 </td>
             </tr>
 

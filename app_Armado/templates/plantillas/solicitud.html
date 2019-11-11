@@ -16,10 +16,7 @@
 {%endif%}
 
 
-<a class="btn btn-secondary" role="button" href="{% url 'listar_solicitud' %}"  >Listar</a>
-
-
-<form class="form" align='center' method="POST">
+<form  align='center' method="POST">
     {%csrf_token%}
     <table  class="table table-striped table-bordered">
 
@@ -111,7 +108,7 @@
         
 </form>
 <br>
-
+<a class="btn btn-secondary" role="button" href="{% url 'listar_solicitud' %}"  >Listar</a>
 <br/>
 <h2 align='center'>Listado de su solicitud</h2>
 <br/>
