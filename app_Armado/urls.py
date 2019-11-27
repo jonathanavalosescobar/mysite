@@ -3,12 +3,15 @@ from . import views
 from .views import info, form, inicio, RegistroUsuario, exito, login_exito, login_salida, listar_solicitud, listarproductos, listarpedidos, listar_solicitud_tecnico
 
 from django.contrib import admin
-from django.conf.urls import url
-
+from django.conf.urls import url, include
 from django.contrib.auth.decorators import login_required
 
-
-
+from rest_framework import routers
+from app_Armado.quickstart import viewss
+# Wire up our API using automatic URL routing.
+router = routers.DefaultRouter()
+router.register(r'users', viewss.UserViewSet)
+router.register(r'products', viewss.ProductoViewSet)
 
 
 urlpatterns = [
@@ -27,6 +30,9 @@ urlpatterns = [
     path('listar_pedidos',login_required(listarpedidos),name="listarpedidos"),
 
     path('logged_out',login_salida , name='logged_out'),
-    url(r'form', RegistroUsuario.as_view(), name="form") 
-  
+    url(r'form', RegistroUsuario.as_view(), name="form"), 
+
+    # Additionally, we include login URLs for the browsable API.
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
