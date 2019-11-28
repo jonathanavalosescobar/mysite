@@ -31,6 +31,7 @@
             <th>Disco duro</th>
             <th>Modelo de Gabinete</th>
             <th>Precio</th>
+            <th>Imagen</th>
             
             
         </tr>
@@ -45,7 +46,13 @@
             <td>{{p.disco_duro}}</td>
             <td>{{p.modelo_gabinete}}</td>
             <td>{{p.precio }}</td>
-           
+            <td>
+
+                {%if p.imagen%}  
+                <img src="{{p.imagen.url}}"  width="200" height="200">
+                {%endif%}  
+            </td>
+
         </tr>
         {%endfor%}
     </table>

@@ -30,6 +30,7 @@ class Producto(models.Model):
     disco_duro = models.TextField(max_length=22)
     modelo_gabinete  = models.TextField(max_length=20)
     precio = models.TextField(max_length=20)
+    imagen = models.ImageField(upload_to="Productos",null=True)
     
     def __str__(self):
         return self.procesador
